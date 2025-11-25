@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+/* .App{
+  border: 1px solid gray;
+  margin: 50px 30px;
+  padding: 25px 15px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.to-do-container{
   display: flex;
   flex-direction: column;
+  
+}
+
+.to-do-container ul li{
+ width: 170px;
+ overflow-wrap:break-word; 
+ list-style-type: "👉";
+ cursor: pointer;
+}
+
+.done{
+  text-decoration: line-through;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+ align-items: center;   
+}
+
+.trash{
+  cursor: pointer;
+} */
+
+/* Container */
+.App {
+  max-width: 380px;
+  margin: 60px auto;
+  padding: 30px 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.App h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Todo container */
+.to-do-container {
+  margin-top: 20px;
+}
+
+.to-do-container ul {
+  padding: 0;
+}
+
+/* List item container */
+.item {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #f7f7f7;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.item:hover {
+  background: #e9e9e9;
+}
+
+/* List text */
+.to-do-container ul li {
+  width: 80%;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+}
+
+/* Completed style */
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Delete button */
+.trash {
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.trash:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+/* Input */
+input {
+  width: 70%;
+  padding: 10px 12px;
+  margin-top: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+/* Button */
+button {
+  margin-left: 10px;
+  padding: 10px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  background: #007bff;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
 }
